@@ -1,0 +1,60 @@
+table {
+    border-collapse: unset !important;
+    border-spacing: 0 !important;
+    border: 0 !important;
+    width: 100%;
+
+    tbody {
+        & > :not(:last-child) {
+            td,th {
+                border-bottom: 1px solid #cccccc;
+            }
+        }
+    }
+
+    tr {
+        & > :not(:last-child) {
+            border-right: 1px solid #cccccc;
+        }
+    }
+
+    td {
+        img {
+        }
+
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+}
+
+.wp-block-table {
+    overflow-x: unset !important;
+
+    &:not(._center) {
+        @media (max-width: 992px) {
+            overflow-x: auto !important;
+            width: 100vw;
+            margin-left: -30px;
+            max-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    &._center {
+        max-width: 560px;
+        margin-right: auto;
+        margin-left: auto;
+
+        td {
+            width: 50%;
+        }
+
+        table {
+            padding: 0 !important;
+            width: 100% !important;
+        }
+    }
+}

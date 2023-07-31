@@ -1,0 +1,131 @@
+.scope {
+    // .scope__container
+
+    &__container {
+    }
+
+    // .scope__body
+
+    &__body {
+    }
+
+    ._section-top {
+        display: none;
+
+        @media (max-width: 600px) {
+            display: block;
+        }
+    }
+
+    // .scope__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        @include adaptive-value("row-gap", 40, 30, 1);
+        @include adaptive-value("column-gap", 68, 0, 1);
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 600px) {
+            display: flex;
+            gap: 0 !important;
+            width: fit-content;
+            padding-inline: 15px;
+
+            & > :not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+
+        & > :first-child {
+            grid-column: span 2;
+
+            background-color: #c02235;
+            border-radius: 30px;
+            color: #fff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include adaptive-value("padding-inline", 100, 0, 1);
+            @include adaptive-value("padding-top", 150, 60, 1);
+            @include adaptive-value("padding-bottom", 150, 60, 1);
+
+            h2 {
+                font-weight: 600;
+
+                @include adaptive-value("font-size", 42, 28, 1);
+            }
+
+            @media (max-width: 600px) {
+                display: none;
+            }
+        }
+
+        // .scope__grid-scroll
+
+        &-scroll {
+            @media (max-width: 600px) {
+                width: 100vw;
+                margin-left: -15px;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar{
+                    display: none;
+                }
+            }
+        }
+
+        // .scope__grid-item
+
+        &-item {
+            background-color: #f5f6fa;
+            border-radius: 30px;
+
+            @include adaptive-value("padding-inline", 30, 15, 1);
+            @include adaptive-value("padding-bottom", 60, 30, 1);
+
+            @media (max-width: 600px) {
+                width: 280px;
+                flex: 0 0 auto;
+            }
+
+            span {
+                display: block;
+                width: 100px;
+                height: 100px;
+                background-color: #c02235;
+                border-radius: 0px 0px 20px 20px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg,
+                img {
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+
+            h3 {
+                font-weight: 500;
+
+                @include adaptive-value("font-size", 22, 18, 1);
+                @include adaptive-value("margin-top", 60, 20, 1);
+            }
+
+            p {
+                font-weight: 400;
+                margin-top: 20px;
+
+                @include adaptive-value("font-size", 16, 14, 1);
+            }
+        }
+    }
+}

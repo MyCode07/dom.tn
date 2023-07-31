@@ -1,0 +1,180 @@
+.comparison {
+    // .comparison__container
+
+    &__container {
+    }
+
+    // .comparison__body
+
+    &__body {
+    }
+
+    // .comparison__table
+
+    &__table {
+        @media (max-width: 1260px) {
+            width: 100vw;
+            margin-left: -30px;
+
+            overflow-x: auto;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+
+        @media (max-width: 992px) {
+            margin-left: -15px;
+        }
+
+        table {
+            @media (max-width: 1260px) {
+                width: fit-content;
+                padding-inline: 30px;
+            }
+
+            @media (max-width: 992px) {
+                padding-inline: 15px;
+            }
+
+            tbody {
+            }
+
+            img {
+                vertical-align: middle;
+                width: auto;
+                max-width: none;
+            }
+
+            tr {
+                & > :first-child {
+                    width: 260px;
+                }
+
+                & > :nth-child(2) {
+                    width: 280px;
+                }
+            }
+
+            td {
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+
+            td,
+            th {
+                color: rgba(0, 0, 0, 0.5);
+
+                font-size: 1rem;
+                font-weight: 300;
+                line-height: 1.2;
+                padding: 1.5625rem 1.25rem;
+                vertical-align: middle;
+
+                &:first-child {
+                    padding-left: 0;
+                }
+            }
+
+            th {
+                div {
+                    text-transform: uppercase;
+                    display: flex;
+                    align-items: center;
+                    font-size: 30px;
+                    text-align: left;
+
+                    span {
+                        font-size: 14px;
+                        display: block;
+                    }
+
+                    p {
+                        margin-left: 25px;
+                    }
+                }
+            }
+
+            .tableicon {
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                text-transform: uppercase;
+
+                img {
+                    width: 45px;
+                    height: 42px;
+                }
+
+                p {
+                    margin-left: 20px;
+                    color: #363636;
+                }
+            }
+
+            .showing {
+                display: flex;
+                align-items: center;
+
+                span {
+                    display: block;
+                    width: 22px;
+                    height: 43px;
+                    background-color: #b9b8b7;
+                    margin-right: 17px;
+                }
+
+                &.active {
+                    span {
+                        background-color: #159248;
+                        position: relative;
+
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            width: 1px;
+                            height: 282px;
+                            border-right: 2px dashed #159248;
+                            right: 0;
+                            top: 100%;
+                        }
+                    }
+
+                    p {
+                        color: #159248;
+                        font-weight: 700;
+                    }
+                }
+
+                &.second span {
+                    width: 47px;
+                }
+
+                &.third span {
+                    width: 62px;
+                }
+
+                &.fouth span {
+                    width: 132px;
+                }
+
+                &.fifth span {
+                    width: 165px;
+
+                    &:after {
+                        height: 192px;
+                    }
+                }
+
+                &.sixth span {
+                    width: 385px;
+                }
+
+                &.seventh span {
+                    width: 510px;
+                }
+            }
+        }
+    }
+}

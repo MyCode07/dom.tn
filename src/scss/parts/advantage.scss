@@ -1,0 +1,122 @@
+.advantage {
+    position: relative;
+    @include adaptive-value("padding-top", 105, 65, 1);
+    @include adaptive-value("padding-bottom", 137, 102, 1);
+    background-color: #f0f0f0;
+
+    &:before {
+        position: absolute;
+        content: url("@img/icons/crosses.svg");
+        width: 158px;
+
+        @include adaptive-value("top", 52.5, 32.5, 1);
+        @include adaptive-value("left", 80, 15, 1);
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+
+    // .advantage__container
+
+    &__container {
+    }
+
+    // .advantage__body
+
+    &__body {
+    }
+
+    ._section-top {
+        @include adaptive-value("margin-bottom", 100, 40, 1);
+
+        h2,
+        p {
+            display: inline;
+            vertical-align: middle;
+        }
+
+        p {
+            margin: 0;
+            @include adaptive-value("font-size", 18, 16, 1);
+        }
+
+        h2 {
+            @include adaptive-value("font-size", 46, 20, 1);
+        }
+    }
+
+    ol {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 75px 30px;
+
+        @media (max-width: 600px) {
+            display: block;
+            gap: 0;
+
+            & > :not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
+
+        li {
+            max-width: 530px;
+
+            &:has(.icon) {
+                display: flex;
+            }
+
+            .icon {
+                flex: 0 0 auto;
+
+                @include adaptive-value("width", 70, 60, 1);
+                @include adaptive-value("margin-right", 30, 15, 1);
+            }
+
+            .decription {
+            }
+
+            h3 {
+                margin-bottom: 7px;
+            }
+
+            p {
+            }
+        }
+    }
+
+    // .advantage-tech
+
+    &-tech {
+        background: url("@img/fon1.png") no-repeat;
+        background-size: 100% 100%;
+
+        @include adaptive-value("padding-top", 90, 70, 1);
+        @include adaptive-value("padding-bottom", 123, 73, 1);
+
+        @media (max-width: 768px) {
+            background-size: cover;
+        }
+
+        &:before {
+            display: none;
+        }
+
+        ._section-top {
+            h2 {
+                display: block;
+                @include adaptive-value("font-size", 30, 22, 1);
+            }
+
+            ol {
+                li {
+                    h3 {
+                        font-weight: 700;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

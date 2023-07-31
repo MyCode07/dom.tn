@@ -1,0 +1,75 @@
+.main {
+    padding-top: 3.125rem;
+
+    // .main__container
+
+    &__container {
+    }
+
+    // .main__body
+
+    &__body {
+    }
+
+    // .main__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px 25px;
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 600px) {
+            gap: 0 !important;
+            display: block;
+
+            & > :not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+        &.grid-5 {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+
+    // .main__rows
+
+    &__rows {
+        & > :not(:last-child) {
+            margin-bottom: 17px;
+        }
+    }
+
+    &.materials {
+        background-color: #f0f0f0;
+
+        @include adaptive-value("padding-top", 105, 65, 1);
+        @include adaptive-value("padding-bottom", 110, 70, 1);
+
+        .main__grid {
+            gap: 60px 90px;
+
+            @media (max-width: 1440px) {
+                gap: 60px;
+            }
+
+            @media (max-width: 1024px) {
+                gap: 60px 30px;
+            }
+
+            @media (max-width: 600px) {
+                & > :not(:last-child) {
+                    margin-bottom: 60px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,275 @@
+.ipoteka {
+    // .ipoteka__container
+
+    &__container {
+    }
+
+    // .ipoteka__body
+
+    &__body {
+    }
+
+    ._section-top {
+        text-align: center;
+    }
+
+    // .ipoteka__flex
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        &:last-child {
+            margin-top: 85px;
+        }
+
+        // .ipoteka__flex-content
+
+        &-content {
+            max-width: 306px;
+            margin-right: 20px;
+
+            @media (max-width: 768px) {
+                max-width: 360px;
+                margin-bottom: 40px;
+                margin-right: 0;
+            }
+
+            p {
+                font-size: 24px;
+                color: #2d3134;
+            }
+
+            & > :last-child {
+                font-size: 20px;
+                margin-top: 15px;
+            }
+        }
+
+        // .ipoteka__flex-graphic
+
+        &-graphic {
+            display: flex;
+            justify-content: center;
+            max-width: 1076px;
+            width: 100%;
+
+            // .ipoteka__flex-graphic-body
+
+            &-body {
+                width: 100%;
+                max-width: 490px;
+
+                @media (max-width: 768px) {
+                    max-width: none;
+                }
+            }
+
+            &.graphic-2 {
+                .ipoteka__flex-graphic-body {
+                    max-width: none;
+                }
+
+                .ipoteka__flex-top-content {
+                    width: 100%;
+                    padding-bottom: 0;
+
+                    div {
+                        background-color: transparent;
+                        padding: 0 15px;
+                        min-height: 60px;
+                        position: relative;
+
+                        &:before {
+                            content: "";
+                            width: 2px;
+                            height: 89px;
+                            position: absolute;
+                            right: -1px;
+                            bottom: -45px;
+                            background: url("@img/border-small.png");
+                        }
+
+                        &:after {
+                            content: "";
+                            width: 10px;
+                            height: 10px;
+                            background: #2d3134;
+                            border-radius: 50%;
+                            position: absolute;
+                            right: -5px;
+                            bottom: -6px;
+                        }
+                    }
+
+                    & > :first-child,
+                    & > :nth-child(2) {
+                        width: 21%;
+
+                        @media (max-width: 992px) {
+                            width: 26%;
+                        }
+
+                        @media (max-width: 768px) {
+                            width: 33.333%;
+                        }
+                    }
+
+                    & > :nth-child(3) {
+                        width: 58%;
+
+                        @media (max-width: 992px) {
+                            width: 48%;
+                        }
+
+                        @media (max-width: 768px) {
+                            width: 33.333%;
+                        }
+                    }
+                }
+            }
+        }
+
+        // .ipoteka__flex-top
+
+        &-top {
+            &-content {
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                padding-bottom: 16px;
+
+                p {
+                    padding-right: 6px;
+                    font-weight: 700;
+                    color: #2d3134;
+                    padding-inline: 15px;
+
+                    width: calc(33.333% - 10px);
+                    @include adaptive-value("font-size", 12, 10, 1);
+
+                    @media (max-width: 768px) {
+                        padding-inline: 10px;
+                    }
+                }
+
+                div {
+                    padding: 10px 20px;
+                    text-align: center;
+                    color: #2d3134;
+                    background-color: #ffe978;
+
+                    width: calc(33.333% - 10px);
+                    @include adaptive-value("font-size", 12, 10, 1);
+
+                    @media (max-width: 768px) {
+                        padding: 10px;
+                    }
+                }
+            }
+        }
+
+        // .ipoteka__flex-bottom
+
+        &-bottom {
+            &-content {
+                display: flex;
+
+                div {
+                    padding-top: 16px;
+                    text-align: center;
+                    font-size: 12px;
+                    color: #2d3134;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        width: 2px;
+                        height: 45px;
+                        background: url("@img/border-small.png");
+                        position: absolute;
+                        right: -1px;
+                        top: 0;
+                    }
+
+                    &:after {
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        background: #2d3134;
+                        border-radius: 50%;
+                        position: absolute;
+                        right: -5px;
+                        top: -5px;
+                    }
+                }
+
+                & > :first-child {
+                    width: 42%;
+                }
+
+                & > :nth-child(2),
+                & > :nth-child(3) {
+                    width: 22%;
+                }
+
+                & > :nth-child(4) {
+                    width: 14%;
+
+                    &:before,
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+._container {
+}
+
+.animate {
+    // .animate-top
+
+    &-top {
+    }
+
+    // .animate-top
+
+    &-top {
+    }
+
+    // .animate-separator1
+
+    &-separator1 {
+        height: 1px;
+        background-color: #2d3134;
+        opacity: 0.4;
+        border-radius: 20px;
+
+        max-width: 86%;
+    }
+
+    // .animate-separator2
+
+    &-separator2 {
+        background-color: #2d3134;
+        opacity: 0.4;
+        border-radius: 20px;
+        height: 2px;
+    }
+
+    // .animate-top
+
+    &-top {
+    }
+
+    // .animate-top
+
+    &-top {
+    }
+}

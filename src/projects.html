@@ -1,0 +1,527 @@
+@@include('./html/head.html', {
+"title":"Проекты домов",
+})
+
+@@include('./html/header.html')
+
+<main>
+
+    <section class="hero">
+        <div class="hero__bgi">
+            <img src="img/hero.jpg" alt="">
+        </div>
+        <div class="hero__container _container">
+            <div class="hero__body">
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="projects__container _container">
+            <div class="projects__body">
+                <div class="_section-top">
+                    <h2>Проекты домов</h2>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="">ТИПОВЫЕ ПРОЕКТЫ</a></li>
+                        <li><a href="">ДОКУМЕНТАЦИЯ</a></li>
+                    </ul>
+                </nav>
+
+                <div class="projects__filters-mobile">
+                    <button class="mobile-sorting">
+                        <svg>
+                            <use href="img/icons/sprite.svg#icon-sort"></use>
+                        </svg>
+                        <span>Сортировка</span>
+                    </button>
+                    <button class="mobile-filter">
+                        <svg>
+                            <use href="img/icons/sprite.svg#icon-filter"></use>
+                        </svg>
+                        <span>Фильтр</span>
+                    </button>
+                </div>
+
+                <div class="projects__filters">
+                    <div class="projects__filters-top">
+                        <span>Фильтр</span>
+                        <button class="filters-close">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#icon-cross" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="filter-item">
+                        <button class="filter-item__button">Этажность</button>
+                        <div class="filter-item__hidden">
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="storey" value="0" checked class="default">
+                                        <span class="checkbox checkbox-circle"></span>
+                                        <span class="content">
+                                            <span class="field">Любая</span>
+                                            <span class="value">13</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="storey" value="1" data-storey="1">
+                                        <span class="checkbox"></span>
+                                        <span class="content">
+                                            <span class="field">1</span>
+                                            <span class="value">9</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="storey" value="2" data-storey="2">
+                                        <span class="checkbox"></span>
+                                        <span class="content">
+                                            <span class="field">2</span>
+                                            <span class="value">4</span>
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter-item">
+                        <button class="filter-item__button">Площадь жилой части, м<sup>2</sup></button>
+                        <div class="filter-item__hidden _large">
+                            <div class="filter-item__range range">
+                                <div class="range-slider" id="range-slider-square" data-min="0" data-max="200"
+                                    data-step="1"></div>
+                                <div class="range-fields">
+                                    <div class="range-field">
+                                        <span>От:</span>
+                                        <input class="range-field__min" type="number" value="0" min="0" max="200"
+                                            name="square_from">
+                                    </div>
+                                    <div class="range-field">
+                                        <span>До:</span>
+                                        <input class="range-field__max" type="number" value="200" max="200"
+                                            name="square_from">
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="filter-range__reset">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#icon-cross">
+                                </svg>
+                                <span>Сбросить</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="filter-item">
+                        <button class="filter-item__button">Стоимость</button>
+                        <div class="filter-item__hidden _large">
+                            <div class="filter-item__range range">
+                                <div class="range-slider" id="range-slider-price" data-min="0" data-max="3070624"
+                                    data-step="1"></div>
+                                <div class="range-fields">
+                                    <div class="range-field">
+                                        <span>От:</span>
+                                        <input class="range-field__min" type="number" value="0" min="0" max="3070624"
+                                            name="price_from">
+                                        <span>₽</span>
+                                    </div>
+                                    <div class="range-field">
+                                        <span>До:</span>
+                                        <input class="range-field__max" type="number" value="3070624" max="3070624"
+                                            name="price_from">
+                                        <span>₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="filter-range__reset">
+                                <svg>
+                                    <use xlink:href="img/icons/sprite.svg#icon-cross">
+                                </svg>
+                                <span>Сбросить</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="filter-item">
+                        <button class="filter-item__button">Кол-во спален</button>
+                        <div class="filter-item__hidden">
+                            <ul>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="bedrooms" value="0" checked class="default">
+                                        <span class="checkbox checkbox-circle"></span>
+                                        <span class="content">
+                                            <span class="field">Любая</span>
+                                            <span class="value">13</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="bedrooms" value="1" data-bedrooms="1">
+                                        <span class="checkbox"></span>
+                                        <span class="content">
+                                            <span class="field">1</span>
+                                            <span class="value">1</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="bedrooms" value="2" data-bedrooms="2">
+                                        <span class="checkbox"></span>
+                                        <span class="content">
+                                            <span class="field">2</span>
+                                            <span class="value">5</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="bedrooms" value="3" data-bedrooms="3">
+                                        <span class="checkbox"></span>
+                                        <span class="content">
+                                            <span class="field">3</span>
+                                            <span class="value">5</span>
+                                        </span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label>
+                                        <input type="radio" name="bedrooms" value="3" data-bedrooms="3">
+                                        <span class="checkbox"></span>
+                                        <span class="content">
+                                            <span class="field">4</span>
+                                            <span class="value">2</span>
+                                        </span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="filter-item">
+                        <button class="filter-item__reset">
+                            <svg>
+                                <use href="img/icons/sprite.svg#icon-cross">
+                                </use>
+                            </svg><span>Сбросить фильтры</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="projects__sorting">
+                    <span class="projects__sorting-title">Сортировать по:</span>
+                    <label>
+                        <input class="sorting-asc" type="radio" value="sort" name="sorting">
+                        <span>популярности</span>
+                        <svg width="8" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.691.374a.4.4 0 0 1 .618 0L7.79 4.595a.4.4 0 0 1-.308.655H.518a.4.4 0 0 1-.308-.655L3.69.375Z">
+                            </path>
+                            <path
+                                d="M4.309 13.626a.4.4 0 0 1-.618 0L.21 9.405a.4.4 0 0 1 .308-.655h6.964a.4.4 0 0 1 .308.655l-3.481 4.22Z">
+                            </path>
+                        </svg>
+                    </label>
+                    <label>
+                        <input class="sorting-asc" type="radio" value="price" name="sorting">
+                        <span>стоимости</span>
+                        <svg width="8" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.691.374a.4.4 0 0 1 .618 0L7.79 4.595a.4.4 0 0 1-.308.655H.518a.4.4 0 0 1-.308-.655L3.69.375Z">
+                            </path>
+                            <path
+                                d="M4.309 13.626a.4.4 0 0 1-.618 0L.21 9.405a.4.4 0 0 1 .308-.655h6.964a.4.4 0 0 1 .308.655l-3.481 4.22Z">
+                            </path>
+                        </svg>
+                    </label>
+                    <label>
+                        <input class="sorting-asc" type="radio" value="square" name="sorting">
+                        <span>площади</span>
+                        <svg width="8" height="14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.691.374a.4.4 0 0 1 .618 0L7.79 4.595a.4.4 0 0 1-.308.655H.518a.4.4 0 0 1-.308-.655L3.69.375Z">
+                            </path>
+                            <path
+                                d="M4.309 13.626a.4.4 0 0 1-.618 0L.21 9.405a.4.4 0 0 1 .308-.655h6.964a.4.4 0 0 1 .308.655l-3.481 4.22Z">
+                            </path>
+                        </svg>
+                    </label>
+                </div>
+
+                <div class="projects__grid">
+                    <article class="project-card">
+                        <div class="project-card__body">
+                            <a href="" class="project-card__image">
+                                <img src="img/project.jpg" alt="">
+                            </a>
+                            <div class="project-card__title">
+                                <h3><a href="">ГОЙЯ</a></h3>
+                            </div>
+                            <div class="project-card__params">
+                                <span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-size">
+                                    </svg>
+                                    <label>71.19 м²</label>
+                                </span><span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-size-block">
+                                    </svg>
+                                    <label>9.15х9.55</label>
+                                </span><span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-menu">
+                                    </svg>
+                                    <label>1 этаж</label>
+                                </span><span>
+                                    <img src="img/icons/dir.svg" alt="">
+                                    <label>2.5 м</label>
+                                </span><span>
+                                    <img src="img/icons/badroom.svg" alt="">
+                                    <label>2 спальни</label>
+                                </span><span>
+                                    <img src="img/icons/sanuzel.svg" alt="">
+                                    <label>1</label>
+                                </span>
+                            </div>
+                            <span class="project-card__price">от 1 467 990 ₽</span>
+
+                            <div class="project-card__hidden">
+                                <span class="project-card__hidden-title">В комплектации Стандарт</span>
+
+                                <div class="project-card__variants">
+                                    <span class="project-card__variants-title">Варианты внешней отделки:</span>
+                                    <ol>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__body">
+                            <a href="" class="project-card__image">
+                                <img src="img/project.jpg" alt="">
+                            </a>
+                            <div class="project-card__title">
+                                <h3><a href="">ГОЙЯ</a></h3>
+                            </div>
+                            <div class="project-card__params">
+                                <span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-size">
+                                    </svg>
+                                    <label>71.19 м²</label>
+                                </span><span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-size-block">
+                                    </svg>
+                                    <label>9.15х9.55</label>
+                                </span><span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-menu">
+                                    </svg>
+                                    <label>1 этаж</label>
+                                </span><span>
+                                    <img src="img/icons/dir.svg" alt="">
+                                    <label>2.5 м</label>
+                                </span><span>
+                                    <img src="img/icons/badroom.svg" alt="">
+                                    <label>2 спальни</label>
+                                </span><span>
+                                    <img src="img/icons/sanuzel.svg" alt="">
+                                    <label>1</label>
+                                </span>
+                            </div>
+                            <span class="project-card__price">от 1 467 990 ₽</span>
+
+                            <div class="project-card__hidden">
+                                <span class="project-card__hidden-title">В комплектации Стандарт</span>
+
+                                <div class="project-card__variants">
+                                    <span class="project-card__variants-title">Варианты внешней отделки:</span>
+                                    <ol>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__body">
+                            <a href="" class="project-card__image">
+                                <img src="img/project.jpg" alt="">
+                            </a>
+                            <div class="project-card__title">
+                                <h3><a href="">ГОЙЯ</a></h3>
+                            </div>
+                            <div class="project-card__params">
+                                <span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-size">
+                                    </svg>
+                                    <label>71.19 м²</label>
+                                </span><span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-size-block">
+                                    </svg>
+                                    <label>9.15х9.55</label>
+                                </span><span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-menu">
+                                    </svg>
+                                    <label>1 этаж</label>
+                                </span><span>
+                                    <img src="img/icons/dir.svg" alt="">
+                                    <label>2.5 м</label>
+                                </span><span>
+                                    <img src="img/icons/badroom.svg" alt="">
+                                    <label>2 спальни</label>
+                                </span><span>
+                                    <img src="img/icons/sanuzel.svg" alt="">
+                                    <label>1</label>
+                                </span>
+                            </div>
+                            <span class="project-card__price">от 1 467 990 ₽</span>
+
+                            <div class="project-card__hidden">
+                                <span class="project-card__hidden-title">В комплектации Стандарт</span>
+
+                                <div class="project-card__variants">
+                                    <span class="project-card__variants-title">Варианты внешней отделки:</span>
+                                    <ol>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__body">
+                            <a href="" class="project-card__image">
+                                <img src="img/project.jpg" alt="">
+                            </a>
+                            <div class="project-card__title">
+                                <h3><a href="">ГОЙЯ</a></h3>
+                            </div>
+                            <div class="project-card__params">
+                                <span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-size">
+                                    </svg>
+                                    <label>71.19 м²</label>
+                                </span><span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-size-block">
+                                    </svg>
+                                    <label>9.15х9.55</label>
+                                </span><span>
+                                    <svg>
+                                        <use xlink:href="img/icons/sprite.svg#icon-menu">
+                                    </svg>
+                                    <label>1 этаж</label>
+                                </span><span>
+                                    <img src="img/icons/dir.svg" alt="">
+                                    <label>2.5 м</label>
+                                </span><span>
+                                    <img src="img/icons/badroom.svg" alt="">
+                                    <label>2 спальни</label>
+                                </span><span>
+                                    <img src="img/icons/sanuzel.svg" alt="">
+                                    <label>1</label>
+                                </span>
+                            </div>
+                            <span class="project-card__price">от 1 467 990 ₽</span>
+
+                            <div class="project-card__hidden">
+                                <span class="project-card__hidden-title">В комплектации Стандарт</span>
+
+                                <div class="project-card__variants">
+                                    <span class="project-card__variants-title">Варианты внешней отделки:</span>
+                                    <ol>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                        <li>
+                                            <img src="img/project-1.jpg" alt="">
+                                            <label>Hauberk с планкеном</label>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+
+@@include('./html/footer.html')
+
+@@include('./html/scripts.html')

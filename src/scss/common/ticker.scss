@@ -1,0 +1,19 @@
+._ticker {
+    overflow: hidden;
+    display: flex;
+
+    @media (any-hover: hover) {
+        &:hover {
+            .ticker-text {
+                animation-play-state: paused;
+            }
+        }
+    }
+
+    // ._ticker-text
+
+    &-text {
+        font-style: normal;
+        white-space: nowrap;
+    }
+}

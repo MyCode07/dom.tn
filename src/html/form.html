@@ -1,0 +1,72 @@
+<form class="form" action="#">
+    <div class="form__rows">
+
+        <div class="form__rows-item">
+            <h3>Расскажите о себе</h3>
+            <div class="form__rows-content">
+                <div class="form__rows-left">
+                    <div data-required class="form__input">
+                        <input type="text" name="name" value="" placeholder="Ф.И.О.">
+                    </div>
+
+                </div>
+                <div class="form__rows-right">
+                    <div data-required class="form__input">
+                        <input type="text" name="phone" value="" placeholder="Контактный телефон">
+                    </div>
+                    <div data-required class="form__input">
+                        <input type="email" name="email" value="" placeholder="Контактный e-mail">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__rows-item form__radio">
+            <div class="form__rows-content">
+                <div class="form__rows-left" data-checkbox-container>
+                    <p>
+                        <span class="answer">Хостинг — физическое место на сервере, где хранятся файлы
+                            вашего сайта. Например: beget.ru</span>
+                        Есть ли хостинг для сайта?
+                        <a href="" class="question-img"><img src="img/svg/question.svg" alt=""></a>
+                    </p>
+                    <div class="form__input">
+                        <div>
+                            <input type="checkbox" id="hosting" name="hosting" value="Есть">
+                            <span class="checkmark"></span>
+                            <label for="hosting">Да</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="no-hosting" name="hosting" value="Нет, нужно приобрести">
+                            <span class="checkmark"></span>
+                            <label for="no-hosting">Нет, нужно приобрести</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__rows-item">
+            <div class="form__rows-content">
+                <div class="form__rows-left">
+                    <div class="form__input">
+                        <textarea class="form__input-sms" name="more" placeholder="Дополнения и пожелания"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__button">
+            <button>
+                <span>Отправить сообщение</span>
+            </button>
+            <p>Нажимая на кнопку «Отправить
+                сообщение», я
+                даю
+                согласие на обработку персональных данных
+                и соглашаюсь с
+                <a href="privacy-policy.html">политикой конфиденциальности</a>
+            </p>
+        </div>
+    </div>
+</form>

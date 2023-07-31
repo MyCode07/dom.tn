@@ -1,0 +1,95 @@
+// null default styles
+@import "null";
+
+// load fonts
+@import "fonts";
+
+//load variables
+@import "common/variables";
+
+// load mixins
+@import "mixins";
+
+// load swiper
+@import "../../node_modules/swiper/swiper";
+
+// load dhx
+@import "../../node_modules/dhx-suite/codebase/suite.min";
+
+// load common
+@import "common/common";
+
+// load header
+@import "common/header";
+
+// load footer
+@import "common/footer";
+
+// load error 404
+@import "common/404";
+
+// load side fixed
+@import "common/side-fixed";
+
+// load menu
+@import "common/menu";
+
+// load to top
+@import "common/to-top";
+
+// load form
+@import "common/form";
+
+// load hero
+@import "parts/hero";
+
+// load cards
+@import "parts/cards";
+
+// load projects
+@import "parts/projects";
+
+// load scope
+@import "parts/scope";
+
+// load ipoteka
+@import "parts/ipoteka";
+
+// load progress
+@import "parts/progress";
+
+// load grid
+@import "parts/single-projects";
+
+// load main
+@import "parts/main";
+
+// load technology
+@import "parts/technology";
+
+// load comparison
+@import "parts/comparison";
+
+// load advantage
+@import "parts/advantage";
+
+// load flex
+@import "parts/flex";
+
+
+
+
+
+
+
+// load slider
+@import "parts/slider";
+
+// load breadcrumbs
+@import "parts/breadcrumbs";
+
+// load table
+@import "parts/table";
+
+// load wordpress
+@import "parts/wordpress";

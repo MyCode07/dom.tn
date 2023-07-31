@@ -1,0 +1,214 @@
+.footer {
+    color: #fff;
+    background-color: #2d3134;
+    padding-top: 3.75rem;
+    padding-bottom: 1.875rem;
+
+    // .footer__container
+
+    &__container {
+    }
+
+    // .footer__body
+
+    &__body {
+    }
+
+    // .footer__top
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+
+        & > :not(:last-child) {
+            margin-right: 15px;
+
+            @media (max-width: 1024px) {
+                margin-right: 0;
+            }
+        }
+
+        border-bottom: 1px solid #54555a;
+        padding-bottom: 3.75rem;
+        margin-bottom: 1em;
+
+        @media (max-width: 1024px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px 30px;
+        }
+
+        @media (max-width: 600px) {
+            display: block;
+            gap: 0;
+            padding-bottom: 3rem;
+            margin-bottom: 2em;
+
+            & > :not(:last-child) {
+                margin-bottom: 1.875rem;
+            }
+        }
+
+        ._btn {
+            @media (max-width: 600px) {
+                width: 100%;
+            }
+        }
+
+        div {
+            font-size: 1.125rem;
+
+            span {
+                display: block;
+                font-size: 0.8em;
+                margin-bottom: 5px;
+
+                @media (max-width: 600px) {
+                    font-size: 1em;
+                }
+            }
+
+            a {
+                display: block;
+                font-size: 1em;
+                font-weight: 700;
+
+                @media (max-width: 600px) {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+
+    // .footer__logo
+
+    &__logo {
+        flex: 0 0 auto;
+
+        display: block;
+        width: fit-content;
+
+        img,
+        svg {
+            width: 60px;
+        }
+    }
+
+    // .footer__contacts
+
+    &__contacts {
+        display: flex;
+    }
+
+    // .footer__bottom
+
+    &__center {
+        display: flex;
+        justify-content: space-between;
+
+        border-bottom: 1px solid #54555a;
+        padding-bottom: 2.5rem;
+        margin-bottom: 1.875em;
+
+        & > :not(:last-child) {
+            margin-right: 15px;
+
+            @media (max-width: 1024px) {
+                margin-right: 0;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 30px;
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px 20px;
+        }
+
+        div {
+            flex: 0 0 15.86666%;
+        }
+
+        // .footer__bottom-title
+
+        &-title {
+            font-weight: 700;
+            text-decoration: underline;
+            margin-bottom: 1.25rem;
+            display: block;
+        }
+
+        ul {
+            &:not(.socials) {
+                & > :not(:last-child) {
+                    margin-bottom: 1.25rem;
+                }
+            }
+
+            li {
+                a {
+                    color: rgba($color: #fff, $alpha: 0.5);
+                }
+            }
+        }
+
+        .socials {
+            display: flex;
+            align-items: center;
+
+            & > :not(:last-child) {
+                margin-right: 15px;
+            }
+
+            li {
+                a {
+                    img,
+                    svg {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    a {
+        transition: all 0.3s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    // .footer__bottom
+
+    &__bottom {
+        color: rgba($color: #fff, $alpha: 0.5);
+
+        p {
+            margin-bottom: 0.625rem;
+            @include adaptive-value("font-size", 16, 12, 1);
+            text-transform: uppercase;
+        }
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        a {
+            text-decoration: underline;
+
+            @include adaptive-value("font-size", 16, 12, 1);
+
+            margin-right: 3.125rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

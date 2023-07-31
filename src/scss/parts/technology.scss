@@ -1,0 +1,188 @@
+.technology {
+    padding: 0 !important;
+    @include adaptive-value("margin-bottom", 105, 65, 1);
+
+    // .technology__flex
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+
+    // .technology__left
+
+    &__left {
+        width: 50%;
+
+        color: #3b3b3b;
+        padding-right: 20px;
+
+        @include adaptive-value("padding-top", 85, 60, 1);
+        @include adaptive-value("padding-bottom", 100, 60, 1);
+        position: relative;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            width: 50vw;
+            height: 100%;
+            right: 0;
+            top: 0;
+            background-color: #f0f0f0;
+            z-index: -1;
+
+            @media (max-width: 768px) {
+                width: 100vw;
+                left: -15px;
+            }
+        }
+
+        // .technology__left-body
+
+        &-body {
+            max-width: 580px;
+            margin-left: auto;
+
+            @media (max-width: 768px) {
+                max-width: none;
+                margin-left: 0;
+            }
+        }
+
+        h1 {
+            @include adaptive-value("font-size", 36, 26, 1);
+            margin-bottom: 1.15em;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+
+            @include adaptive-value("margin-bottom", 90, 30, 1);
+        }
+
+        span {
+            margin-top: 25px;
+            display: block;
+            font-size: 14px;
+            font-weight: 300;
+            color: #363636;
+
+            @include adaptive-value("margin-top", 25, 15, 1);
+            @include adaptive-value("padding-right", 40, 0, 1);
+        }
+
+        // .technology__left-img
+
+        &-img {
+            display: flex;
+            justify-content: flex-end;
+            @include adaptive-value("padding-right", 40, 0, 1);
+
+            img {
+                width: calc(50vw - 66px);
+                flex: 0 0 auto;
+                max-width: none;
+                position: relative;
+
+                @media (max-width: 768px) {
+                    width: 100vw;
+                }
+            }
+        }
+    }
+
+    // .technology__right
+
+    &__right {
+        width: 50%;
+        position: relative;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        // .technology__right-img
+
+        &-img {
+            position: absolute;
+            width: 50vw;
+            height: 100%;
+            flex: 0 0 auto;
+            overflow: hidden;
+
+            @media (max-width: 768px) {
+                position: static;
+                width: 100vw;
+                margin-left: -15px;
+                overflow: unset;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                max-width: none;
+
+                transition: all 0.3s ease 0s;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+    // .technology-about
+
+    &-about {
+        .technology__left {
+            @include adaptive-value("padding-top", 110, 50, 1);
+            @include adaptive-value("padding-bottom", 120, 85, 1);
+
+            &:before {
+                background-color: #e1e1e1;
+            }
+        }
+
+        h3 {
+        }
+
+        ._section-top {
+            margin-bottom: 57px !important;
+        }
+
+        ol {
+            & > :not(:last-child) {
+                margin-bottom: 57px;
+                @include adaptive-value("margin-bottom", 57, 35, 1);
+            }
+
+            li {
+                position: relative;
+                display: flex;
+
+                @include adaptive-value("font-size", 24, 16, 1);
+
+                &:before {
+                    content: url("@img/icons/check.svg");
+                    flex: 0 0 auto;
+
+                    @include adaptive-value("width", 42, 30, 1);
+                    @include adaptive-value("margin-right", 17, 10, 1);
+                }
+            }
+        }
+    }
+}

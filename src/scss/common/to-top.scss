@@ -1,0 +1,28 @@
+.to-top {
+    position: fixed;
+    @include adaptive-value("right", 50, 10, 1);
+    @include adaptive-value("bottom", 50, 10, 1);
+    @include adaptive-value("width", 50, 40, 1);
+    @include adaptive-value("height", 50, 40, 1);
+    border-radius: 50%;
+    background: linear-gradient(140deg, #06F 0%, #3586FF 100%);
+    z-index: 6;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translate(0, 50px) rotate(90deg);
+    opacity: 0;
+    transition: all 0.3s ease 0s;
+
+    &._active {
+        transform: translate(0, 0) rotate(0deg);
+
+        opacity: 1;
+    }
+
+    img {
+        @include adaptive-value("height", 25, 20, 1);
+    }
+}
