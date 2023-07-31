@@ -40,6 +40,9 @@
 // load form
 @import "common/form";
 
+// load accordeon
+@import "common/accordeon";
+
 // load hero
 @import "parts/hero";
 
@@ -76,20 +79,8 @@
 // load flex
 @import "parts/flex";
 
+// load process
+@import "parts/process";
 
-
-
-
-
-
-// load slider
-@import "parts/slider";
-
-// load breadcrumbs
-@import "parts/breadcrumbs";
-
-// load table
-@import "parts/table";
-
-// load wordpress
-@import "parts/wordpress";
+// load audit
+@import "parts/audit";

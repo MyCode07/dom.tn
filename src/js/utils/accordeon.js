@@ -1,24 +1,28 @@
-const accordions = document.querySelectorAll('.schema-faq');
+const accordions = document.querySelectorAll('[data-accordion]');
 if (accordions.length) {
 
     accordions.forEach(accordion => {
-        const accordeonItems = accordion.querySelectorAll('.schema-faq-section');
+        const accordeonItems = accordion.querySelectorAll('[data-accordion-item]');
+        const windowWidth = +accordion.dataset.width;
 
-        accordeonItems.forEach(item => {
-            item.addEventListener('click', function (e) {
-                toggleAccordion(item);
+        if (accordeonItems.length && window.innerWidth <= windowWidth) {
+            accordeonItems.forEach(item => {
+                const openBtn = item.querySelector('[data-accordion-title]')
+                openBtn.addEventListener('click', function (e) {
+                    toggleAccordion(item);
+                });
             });
-        });
+        }
     });
 }
 
 
 function toggleAccordion(item) {
-    const accordeon = item.closest('.schema-faq');
-    const accordeonItems = accordeon.querySelectorAll('.schema-faq-section');
+    const accordeon = item.closest('[data-accordion]');
+    const accordeonItems = accordeon.querySelectorAll('[data-accordion-item]');
 
     if (!item.hasAttribute('data-open')) {
-        const openitem = accordeon.querySelector('.schema-faq-section[data-open]');
+        const openitem = accordeon.querySelector('[data-accordion-item][data-open]');
         if (openitem) {
             openitem.removeAttribute('data-open')
         }

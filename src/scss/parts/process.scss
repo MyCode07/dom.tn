@@ -1,0 +1,271 @@
+.process {
+    background-color: #373737;
+    color: #fff;
+    position: relative;
+    @include adaptive-value("padding-bottom", 120, 65, 1);
+
+    margin-bottom: 0 !important;
+
+    &:before {
+        position: absolute;
+        content: "";
+        background: url("@img/icons/pattern-1.svg") no-repeat 0% 50% / contain;
+        z-index: 10;
+
+        right: 0;
+        top: 0;
+
+        transform: translate(0, -50%);
+
+        width: 16.2vw;
+        height: 16.2vw;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    // .process__top
+
+    &__top {
+        img {
+            height: 286px;
+        }
+
+        @media (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    // .process__container
+
+    &__container {
+    }
+
+    // .process__body
+
+    &__body {
+    }
+
+    // .process__flex
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include adaptive-value("margin-bottom", 60, 30, 1);
+
+        @media (max-width: 768px) {
+            display: block;
+        }
+
+        & > :not(:last-child) {
+            margin-right: 30px;
+
+            @media (max-width: 768px) {
+                margin-right: 0;
+            }
+        }
+
+        @include adaptive-value("font-size", 24, 18, 1);
+
+        // .process__flex-left
+
+        &-left {
+            width: 40%;
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+
+        // .process__flex-right
+
+        &-right {
+            width: 60%;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                margin-top: 30px;
+            }
+        }
+
+        &._img {
+            align-items: flex-end;
+            margin-top: -180px;
+
+            @media (max-width: 768px) {
+                margin-top: 0;
+            }
+
+            h2 {
+                @include adaptive-value("font-size", 60, 26, 1);
+            }
+
+            p {
+                @include adaptive-value("margin-top", 20, 12, 1);
+            }
+
+            img {
+                object-fit: cover;
+
+                @media (min-width: 769px) {
+                    @include adaptive-value("height", 680, 400, 1);
+                }
+
+                @media (max-width: 768px) {
+                    height: 200px;
+                    object-position: top;
+                }
+            }
+
+            .process__flex-left {
+                @media (max-width: 768px) {
+                    width: 100vw;
+                    margin-left: -15px;
+                }
+            }
+        }
+
+        &._bgc {
+            position: relative;
+            background-color: #fff;
+            color: #373737;
+
+            justify-content: flex-start;
+
+            @include adaptive-value("padding-top", 70, 24, 1);
+            @include adaptive-value("padding-bottom", 70, 24, 1);
+            @include adaptive-value("padding-inline", 60, 16, 1);
+
+            &:after {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                border: 20px solid transparent;
+                border-right: 20px solid #373737;
+                border-bottom: 20px solid #373737;
+                display: block;
+                width: 0;
+                height: 0;
+            }
+
+            p {
+                max-width: 510px;
+
+                @media (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+
+            a {
+                @include adaptive-value("font-size", 18, 14, 1);
+                color: #2a6cee;
+                font-weight: 600;
+
+                display: flex;
+                align-items: center;
+
+                span {
+                    border-bottom: 1px solid currentColor;
+                }
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 10px;
+                }
+            }
+
+            .process__flex-left {
+                margin-right: 8.3%;
+                width: auto;
+
+                @media (max-width: 768px) {
+                    margin-right: 0;
+                }
+            }
+
+            .process__flex-right {
+                width: auto;
+            }
+        }
+
+        &._text {
+            .process__flex-left {
+                width: auto;
+            }
+
+            .process__flex-right {
+                width: auto;
+            }
+        }
+    }
+}
+
+.accordion {
+    // .accordion__item
+
+    &__item {
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
+
+        // .accordion__item-title
+
+        &-title {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+
+            @include adaptive-value("padding-top", 22, 14, 1);
+            @include adaptive-value("padding-bottom", 22, 14, 1);
+
+            @include adaptive-value("font-size", 24, 18, 1);
+
+            @media (max-width: 600px) {
+                font-weight: 400;
+            }
+
+            img,
+            svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 44px;
+
+                @include adaptive-value("margin-right", 44, 31, 1);
+            }
+        }
+
+        // .accordion__item-content
+
+        &-content {
+            // .accordion__item-content-height
+
+            &-height {
+                div {
+                    color: #e5e5e5;
+
+                    @include adaptive-value("padding-bottom", 30, 15, 1);
+                    @include adaptive-value("padding-left", 60, 47, 1);
+
+                    @media (max-width: 600px) {
+                        padding: 0 0 15px 0 !important;
+                    }
+
+                    & > :not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        @include adaptive-value("font-size", 24, 14, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    // .accordion__open
+
+    &__open {
+    }
+}

@@ -20,8 +20,13 @@
             grid-template-rows: 0fr;
             transition: grid-template-rows 0.3s;
 
-            div {
+            // .accordion__item-content-height
+
+            &-height {
                 overflow: hidden;
+
+                div {
+                }
             }
         }
     }

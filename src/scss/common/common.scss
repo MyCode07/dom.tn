@@ -245,3 +245,22 @@ svg {
         }
     }
 }
+
+blockquote {
+    padding: 20px;
+    border: 1px solid #cdcdcd;
+    margin: 30px 0 0;
+    position: relative;
+
+    @include adaptive-value("font-size", 18, 14, 1);
+    line-height: 1.44;
+
+    &:before {
+        content: "";
+        background: url("@img/icons/attention.svg") no-repeat 50% 50% / contain;
+        width: 18px;
+        height: 18px;
+        display: block;
+        margin-bottom: 15px;
+    }
+}

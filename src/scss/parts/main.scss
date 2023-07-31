@@ -72,4 +72,16 @@
             }
         }
     }
+
+    // .main-audit
+
+    &-audit {
+        h2 {
+            @include adaptive-value("font-size", 60, 28, 1);
+        }
+
+        p {
+            @include adaptive-value("font-size", 24, 14, 1);
+        }
+    }
 }
