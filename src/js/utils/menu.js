@@ -90,6 +90,25 @@ const h2Titles = document.querySelectorAll('h2');
 if (h2Titles.length) {
     h2Titles.forEach(h2 => {
         const text = h2.textContent.toLocaleLowerCase();
-        h2.id = text.replace(/\n\s+/gi, ' ')
+
+        const id = text.replace(/\n\s+/gi, ' ')
+        h2.id = id
+    })
+}
+
+
+const h3Titles = document.querySelectorAll('h3');
+const privacySidebar = document.querySelector('.main-privacy__sidebar ul');
+
+if (privacySidebar && h3Titles.length) {
+    h3Titles.forEach(h3 => {
+        const text = h3.textContent.toLocaleLowerCase();
+
+        const id = text.replace(/\n\s+/gi, ' ')
+        h3.id = id
+
+        const link = `<li><a href="${id}">${h3.textContent}</a></li>`;
+
+        privacySidebar.insertAdjacentHTML('beforeend', link)
     })
 }

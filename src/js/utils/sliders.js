@@ -1,8 +1,6 @@
-import { Swiper, EffectFade, Navigation, FreeMode, Thumbs } from "swiper";
-
+import { Swiper, EffectFade, Navigation, Pagination, FreeMode, Thumbs } from "swiper";
 
 const projectImages = document.querySelector('.project__images');
-
 if (projectImages) {
 
     const bigSlider = projectImages.querySelector('.project__images-big .swiper');
@@ -46,6 +44,54 @@ if (projectImages) {
             thumbs: {
                 swiper: swiperThumbs,
             },
+        });
+    }
+}
+
+
+
+const reviewsSliderContainer = document.querySelector('.reviews-slider');
+if (reviewsSliderContainer) {
+    const reviewsSlider = reviewsSliderContainer.querySelector('.reviews-slider .swiper');
+    const reviewsSlides = reviewsSliderContainer.querySelectorAll('.reviews-slider .swiper-slide');
+
+    if (reviewsSlides.length) {
+        const prev = reviewsSliderContainer.querySelector('.main__slider-prev');
+        const next = reviewsSliderContainer.querySelector('.main__slider-next');
+        const pagination = reviewsSliderContainer.querySelector('.main__slider-pagination');
+
+        new Swiper(reviewsSlider, {
+            modules: [
+                Pagination, Navigation
+            ],
+            watchSlidesProgress: true,
+
+            navigation: {
+                prevEl: prev,
+                nextEl: next
+            },
+
+            pagination: {
+                el: pagination,
+                clickable: true
+            },
+
+            breakpoints: {
+                300: {
+                    slidesPerView: 1,
+                    slidesPerGroup: 1,
+                },
+                601: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 30
+                },
+                1025: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 50
+                }
+            }
         });
     }
 }

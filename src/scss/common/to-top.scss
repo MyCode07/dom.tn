@@ -5,7 +5,7 @@
     @include adaptive-value("width", 50, 40, 1);
     @include adaptive-value("height", 50, 40, 1);
     border-radius: 50%;
-    background: linear-gradient(140deg, #06F 0%, #3586FF 100%);
+    background-color: #c02235;
     z-index: 6;
 
     display: flex;

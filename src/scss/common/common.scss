@@ -165,6 +165,57 @@ svg {
         height: 2.625rem;
         padding: 0 1.5625rem;
     }
+
+    // ._btn-white
+
+    &-white {
+        background-color: #fff;
+        color: #c12139;
+        font-weight: bold;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        transition: 0.3s ease-in-out 0s;
+
+        max-width: 350px;
+        width: 100%;
+
+        @include adaptive-value("font-size", 24, 16, 1);
+        height: 3em;
+        padding-inline: 1.75em;
+
+        border: 2px solid transparent;
+        border-color: currentColor;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: transparent;
+                color: #fff;
+            }
+        }
+
+        @media (max-width: 600px) {
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    // ._btn-white-border
+
+    &-white-border {
+        background-color: transparent;
+        color: #fff;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #fff;
+                color: #c12139;
+            }
+        }
+    }
 }
 
 ._more {
@@ -262,5 +313,130 @@ blockquote {
         height: 18px;
         display: block;
         margin-bottom: 15px;
+    }
+}
+
+._red {
+    background-color: #c12139;
+    position: relative;
+
+    .stripe {
+        height: 30px;
+        background-color: #fff;
+        width: 50vw;
+        position: absolute;
+        left: 100%;
+        margin-left: -100px;
+        bottom: 0;
+        z-index: 10;
+
+        @media (max-width: 600px) {
+            bottom: -10px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            border: 31px solid transparent;
+            border-bottom: 0px solid transparent;
+            border-left: 0px solid transparent;
+            border-right: 40px solid #fff;
+            right: 100%;
+            top: 0;
+        }
+    }
+}
+
+.accordion {
+    // .accordion__item
+
+    &__item {
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
+
+        &[data-open] {
+            .cross {
+                transform: rotate(0);
+            }
+        }
+        // .accordion__item-title
+
+        &-title {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+
+            @include adaptive-value("padding-top", 22, 14, 1);
+            @include adaptive-value("padding-bottom", 22, 14, 1);
+
+            @include adaptive-value("font-size", 24, 18, 1);
+
+            @media (max-width: 600px) {
+                font-weight: 400;
+            }
+
+            .cross {
+                flex: 0 0 auto;
+                width: 16px;
+                height: 16px;
+                @include adaptive-value("margin-right", 44, 15, 1);
+                position: relative;
+                color: #fff;
+
+                transform: rotate(45deg);
+                transition: all 0.3s ease 0s;
+
+                &:before,
+                &:after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 50%;
+                    width: 100%;
+                    height: 2px;
+                    background-color: currentColor;
+                }
+
+                &:before {
+                    transform: translate(0, -50%) rotate(45deg);
+                }
+
+                &:after {
+                    transform: translate(0, -50%) rotate(-45deg);
+                }
+            }
+        }
+
+        // .accordion__item-content
+
+        &-content {
+            // .accordion__item-content-height
+
+            &-height {
+                div {
+                    color: #e5e5e5;
+
+                    @include adaptive-value("padding-bottom", 30, 15, 1);
+                    @include adaptive-value("padding-left", 60, 47, 1);
+
+                    @media (max-width: 600px) {
+                        padding: 0 0 15px 0 !important;
+                    }
+
+                    & > :not(:last-child) {
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        @include adaptive-value("font-size", 24, 14, 1);
+                    }
+                }
+            }
+        }
+    }
+
+    // .accordion__open
+
+    &__open {
     }
 }
