@@ -16,11 +16,14 @@
 // load dhx
 @import "../../node_modules/dhx-suite/codebase/suite.min";
 
+// load fancybox
+@import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox"; 
+
 // load common
 @import "common/common";
 
-// load header
-@import "common/header";
+// load header 
+@import "common/header"; 
 
 // load footer
 @import "common/footer";
