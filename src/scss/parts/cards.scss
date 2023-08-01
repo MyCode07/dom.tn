@@ -577,6 +577,21 @@
             margin-top: -50px;
             padding: 20px;
             @include adaptive-value("font-size", 18, 14, 1);
+
+            @media (any-hover: none) {
+                &:before {
+                    position: absolute;
+                    content: "";
+                    right: 8px;
+                    top: 8px;
+                    background-image: url("@img/icons/close.svg");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+
+                    width: 15px;
+                    height: 15px;
+                }
+            }
         }
 
         &._active {
