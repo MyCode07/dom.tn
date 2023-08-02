@@ -1,72 +1,42 @@
-<form class="form" action="#">
-    <div class="form__rows">
+<div class="popup">
+    <div class="popup__container _container">
+        <div class="popup__body">
+            <div class="popup__content">
+                <button class="popup__close">
+                    <img src="@img/icons/close.svg" alt="">
+                </button>
+                <h6>Оставьте заявку</h6>
+                <p>Заполните форму и наш специалист свяжется с вами в ближайшее время.</p>
 
-        <div class="form__rows-item">
-            <h3>Расскажите о себе</h3>
-            <div class="form__rows-content">
-                <div class="form__rows-left">
-                    <div data-required class="form__input">
-                        <input type="text" name="name" value="" placeholder="Ф.И.О.">
+                <form>
+
+                    <div class="form__item">
+                        <label class="label">Имя</label>
+                        <input type="text" placeholder="Имя">
                     </div>
 
-                </div>
-                <div class="form__rows-right">
-                    <div data-required class="form__input">
-                        <input type="text" name="phone" value="" placeholder="Контактный телефон">
+                    <div class="form__item">
+                        <label class="label">Телефон</label>
+                        <input type="text" placeholder="Телефон" class="_phone">
                     </div>
-                    <div data-required class="form__input">
-                        <input type="email" name="email" value="" placeholder="Контактный e-mail">
+
+                    <div class="form__item">
+                        <span class="wpcf7-form-control wpcf7-acceptance">
+                            <span class="wpcf7-list-item">
+                                <label>
+                                    <input type="checkbox" name="acceptance-920" value="1" aria-invalid="false">
+                                    <span class="wpcf7-list-item-label">Нажимая на кнопку “Отправить”, я соглашаюсь с
+                                        <a href="">политикой конфиденциальности</a></span>
+                                </label>
+                            </span>
+                        </span>
                     </div>
-                </div>
+
+                    <div class="form__item">
+                        <input class="wpcf7-form-control has-spinner wpcf7-submit _btn" type="submit" value="Отправить">
+                    </div>
+                </form>
             </div>
-        </div>
-
-        <div class="form__rows-item form__radio">
-            <div class="form__rows-content">
-                <div class="form__rows-left" data-checkbox-container>
-                    <p>
-                        <span class="answer">Хостинг — физическое место на сервере, где хранятся файлы
-                            вашего сайта. Например: beget.ru</span>
-                        Есть ли хостинг для сайта?
-                        <a href="" class="question-img"><img src="img/svg/question.svg" alt=""></a>
-                    </p>
-                    <div class="form__input">
-                        <div>
-                            <input type="checkbox" id="hosting" name="hosting" value="Есть">
-                            <span class="checkmark"></span>
-                            <label for="hosting">Да</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" id="no-hosting" name="hosting" value="Нет, нужно приобрести">
-                            <span class="checkmark"></span>
-                            <label for="no-hosting">Нет, нужно приобрести</label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="form__rows-item">
-            <div class="form__rows-content">
-                <div class="form__rows-left">
-                    <div class="form__input">
-                        <textarea class="form__input-sms" name="more" placeholder="Дополнения и пожелания"></textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="form__button">
-            <button>
-                <span>Отправить сообщение</span>
-            </button>
-            <p>Нажимая на кнопку «Отправить
-                сообщение», я
-                даю
-                согласие на обработку персональных данных
-                и соглашаюсь с
-                <a href="privacy-policy.html">политикой конфиденциальности</a>
-            </p>
         </div>
     </div>
-</form>
+</div>

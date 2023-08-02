@@ -98,8 +98,10 @@ if (h2Titles.length) {
         const id = text.replace(/\n\s+/gi, ' ')
         h2.id = id
 
-        const link = `<li><a href="${id}">${h2.textContent}</a></li>`;
-        privacySidebar.insertAdjacentHTML('beforeend', link)
+        if (privacySidebar) {
+            const link = `<li><a href="#${id}">${h2.textContent}</a></li>`;
+            privacySidebar.insertAdjacentHTML('beforeend', link)
+        }
     })
 }
 
@@ -112,7 +114,7 @@ if (h2Titles.length) {
 //         const id = text.replace(/\n\s+/gi, ' ')
 //         h3.id = id
 
-//         const link = `<li><a href="${id}">${h3.textContent}</a></li>`;
+//         const link = `<li><a href="#${id}">${h3.textContent}</a></li>`;
 
 //         privacySidebar.insertAdjacentHTML('beforeend', link)
 //     })

@@ -2,7 +2,7 @@ import { isMobile } from "./isMobile.js";
 
 const popup = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
-const popupOpenButtons = document.querySelectorAll('.popup-open');
+const popupOpenButtons = document.querySelectorAll('._open-opup');
 
 
 if (popupOpenButtons.length) {
@@ -12,25 +12,25 @@ if (popupOpenButtons.length) {
             popup.classList.add('_open');
             document.body.classList.add('_noscroll');
 
-            if (!isMobile.any()) {
-                lockPadding()
-            }
+            // if (!isMobile.any()) {
+            //     lockPadding()
+            // }
         })
 
         popupClose.addEventListener('click', function () {
             popup.classList.remove('_open');
             document.body.classList.remove('_noscroll');
 
-            if (!isMobile.any()) {
-                unLockPadding()
-            }
+            // if (!isMobile.any()) {
+            //     unLockPadding()
+            // }
         })
 
         popup.addEventListener('click', function (e) {
             if (e.target.classList.contains('popup')) {
                 popup.classList.remove('_open')
                 document.body.classList.remove('_noscroll');
-                unLockPadding()
+                // unLockPadding()
             }
         })
     })

@@ -14,12 +14,11 @@ import './utils/inputmask.js';
 import './utils/filter.js';
 import './utils/audit.js';
 import './utils/accordeon.js';
+import './utils/popup.js';
 
 
 // import './utils/smoothscrol.js';
-
 // import './utils/mouse.js';
 // import './utils/ticker.js';
-// import './utils/popup.js';
 // import './utils/forms.js';
 // import './utils/lazyImages.js';
