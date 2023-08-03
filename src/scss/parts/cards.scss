@@ -277,7 +277,6 @@
     flex-direction: column;
     align-items: center;
 
-
     // .material-img
 
     &-img {
@@ -738,5 +737,120 @@
 
     p {
         @include adaptive-value("font-size", 18, 14, 1);
+    }
+}
+
+.audit-video {
+    margin-bottom: 80px !important;
+
+    @media (max-width: 600px) {
+        margin-bottom: 30px !important;
+        margin-top: 30px;
+    }
+
+    // .audit-video__container
+
+    &__container {
+    }
+
+    // .audit-video__body
+
+    &__body {
+    }
+
+    // .audit-video__grid
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 50px;
+
+        @include adaptive-value("gap", 50, 20, 1);
+        @include adaptive-value("margin-top", -50, -20, 1);
+
+        @media (max-width: 768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 600px) {
+            display: block;
+            gap: 0 !important;
+            margin-top: 0 !important;
+
+            & > :not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .video {
+        position: relative;
+        padding-top: 35%;
+        color: #fff;
+        @include adaptive-value("font-size", 18, 14, 1);
+
+        @media (max-width: 768px) {
+            padding-top: 30%;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 80%;
+            background: linear-gradient(360deg, #c4c4c4 0%, #000000 0.01%, rgba(0, 0, 0, 0) 95.6%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        img,
+        iframe {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+        }
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+            pointer-events: none;
+
+            @include adaptive-value("padding", 24, 16, 1);
+
+            button {
+                flex: 0 0 auto;
+
+                @include adaptive-value("width", 66, 32, 1);
+                @include adaptive-value("height", 66, 32, 1);
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                margin-right: 12px;
+
+                border: 1px solid #fff;
+                border-radius: 50%;
+
+                transition: 0.3s ease-in-out 0s;
+
+                svg {
+                    fill: #fff;
+                    transition: 0.3s ease-in-out 0s;
+
+                    @include adaptive-value("width", 18, 8, 1);
+                    @include adaptive-value("margin-right", -4, -2, 1);
+                }
+            }
+        }
     }
 }
