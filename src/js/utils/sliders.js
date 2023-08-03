@@ -1,4 +1,4 @@
-import { Swiper, EffectFade, Navigation, Pagination, FreeMode, Thumbs } from "swiper";
+import { Swiper, EffectFade, Navigation, Pagination, FreeMode, Thumbs, Manipulation } from "swiper";
 
 const projectImages = document.querySelector('.project__images');
 if (projectImages) {
@@ -14,7 +14,7 @@ if (projectImages) {
 
         const swiperThumbs = new Swiper(thumbsSlider, {
             modules: [
-                FreeMode
+                FreeMode, Manipulation
             ],
             freeMode: true,
             watchSlidesProgress: true,
@@ -33,7 +33,7 @@ if (projectImages) {
 
         const swiperMain = new Swiper(bigSlider, {
             modules: [
-                EffectFade, Navigation, Thumbs
+                EffectFade, Navigation, Thumbs, Manipulation
             ],
             effect: "fade",
             slidesPerView: 1,

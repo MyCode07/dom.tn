@@ -68,6 +68,8 @@
     // .project__images
 
     &__images {
+        @include adaptive-value("min-height", 738, 305, 1);
+
         // .project__images-big
 
         &-big {

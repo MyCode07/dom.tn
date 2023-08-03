@@ -39,10 +39,12 @@
                                 <div class="swiper">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="img/single-project-1.jpg" alt="">
+                                            <img src="img/1x1.png" srcset="img/single-project-1.jpg" loading="lazy" />
+                                            <div class="swiper-lazy-preloader"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="img/single-project-2.jpg" alt="">
+                                            <img src="img/1x1.png" srcset="img/single-project-2.jpg" loading="lazy" />
+                                            <div class="swiper-lazy-preloader"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -62,10 +64,12 @@
                                 <div class="swiper">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="img/single-project-1.jpg" alt="">
+                                            <img src="img/1x1.png" srcset="img/single-project-1.jpg" loading="lazy" />
+                                            <div class="swiper-lazy-preloader"></div>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="img/single-project-2.jpg" alt="">
+                                            <img src="img/1x1.png" srcset="img/single-project-2.jpg" loading="lazy" />
+                                            <div class="swiper-lazy-preloader"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -123,13 +127,11 @@
                                 </span>
                             </div>
                         </div>
-
                         <p class="project__right-title">Варианты внешней отделки:</p>
-
-                        <ul>
+                        <ul class="project__variants">
                             <li>
                                 <label>
-                                    <input type="radio" name="variant">
+                                    <input type="radio" name="variant" checked data-price="1467990" />
                                     <span class="checkbox"></span>
                                     <img src="img/single-project-1.jpg" alt="">
                                     <span>Hauberk с планкеном</span>
@@ -137,36 +139,35 @@
                             </li>
                             <li>
                                 <label>
-                                    <input type="radio" name="variant">
+                                    <input type="radio" name="variant" data-price="1580011" />
                                     <span class="checkbox"></span>
                                     <img src="img/single-project-1.jpg" alt="">
-                                    <span>Hauberk с планкеном</span>
+                                    <span>Hauberk</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="radio" name="variant">
+                                    <input type="radio" name="variant" data-price="1680000" />
                                     <span class="checkbox"></span>
                                     <img src="img/single-project-1.jpg" alt="">
-                                    <span>Hauberk с планкеном</span>
+                                    <span>Имитация бруса</span>
                                 </label>
                             </li>
                             <li>
                                 <label>
-                                    <input type="radio" name="variant">
+                                    <input type="radio" name="variant" data-price="1780000" />
                                     <span class="checkbox"></span>
                                     <img src="img/single-project-1.jpg" alt="">
-                                    <span>Hauberk с планкеном</span>
+                                    <span>Штукатурка с планкеном</span>
                                 </label>
                             </li>
                         </ul>
-
                         <div class="project__right-order">
                             <div>
-                                <span class="project__right-price">1 467 990 ₽</span>
-                                <p>Базовый домокомплект в комплектации "Стандарт</p>
+                                <span class="project__right-price" data-price="1467990"><span>1 467 990</span> ₽</span>
+                                <p>Базовый домокомплект</p>
                             </div>
-                            <a href="" class="_btn">Заказать</a>
+                            <a href="" class="_btn _open-popup">Заказать</a>
                         </div>
                     </div>
                 </div>
@@ -177,7 +178,7 @@
     <section class="complect">
         <div class="complect__container _container">
             <div class="complect__body">
-                <div class="complect__top">
+                <div class="_section-top">
                     <p>Уютный одноэтажный дом общей площадью 71 м² с двускатной крышей, двумя спальнями и просторной
                         гостиной
                         зоной. Здесь есть
@@ -189,6 +190,357 @@
                         добавить индивидуальности. Проект ГОЙЯ — настоящее спасение от городской суеты.</p>
 
                     <h2>Выберите комплектацию</h2>
+                </div>
+                <div class="complect__flex">
+                    <div class="complect__left">
+                        <ol class="complect__variants-price">
+                            <li class="_active">
+                                <label class="total" disabled>
+                                    <span class="checkbox"></span>
+                                    <span class="field">Итоговая стоимость</span>
+                                    <span class="value"></span>
+                                    <span class="price total-price" data-price="1467990"><span>1 467 990</span> ₽</span>
+                                </label>
+                                <label class="add-price">
+                                    <input type="checkbox" name="field" data-price="350000">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Hauberk с планкеном</span>
+                                    <span class="value">142 мм</span>
+                                    <span class="price"><span>350 000</span> ₽</span>
+                                </label>
+                                <label class="add-price">
+                                    <input type="checkbox" name="field" data-price="50000">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Силовой каркас стен</span>
+                                    <span class="value">142 мм</span>
+                                    <span class="price"><span>50 000</span> ₽</span>
+                                </label>
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Силовой каркас стен</span>
+                                    <span class="value">142 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внешнее контрутепление</span>
+                                    <span class="value">50 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Min толщина утепления</span>
+                                    <span class="value">189 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Кровельная панель</span>
+                                    <span class="value">с обрешеткой</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Толщина утепления цоколя и крыши</span>
+                                    <span class="value">239 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внутренние стены обшиты с двух сторон ГСПВ</span>
+                                    <span class="value">+</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внешнее контрутепление</span>
+                                    <span class="value">+</span>
+                                    <span class="price"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="total" disabled>
+                                    <span class="checkbox"></span>
+                                    <span class="field">Итоговая стоимость</span>
+                                    <span class="value"></span>
+                                    <span class="price total-price" data-price="1580011"><span>1 580 011</span> ₽</span>
+                                </label>
+                                <label class="add-price">
+                                    <input type="checkbox" name="field" data-price="15000">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Hauberk</span>
+                                    <span class="value">142 мм</span>
+                                    <span class="price"><span>15 000</span> ₽</span>
+                                </label>
+                                <label class="add-price">
+                                    <input type="checkbox" name="field" data-price="25000">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Силовой каркас стен</span>
+                                    <span class="value">142 мм</span>
+                                    <span class="price"><span>25 000</span> ₽</span>
+                                </label>
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Силовой каркас стен</span>
+                                    <span class="value">142 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внешнее контрутепление</span>
+                                    <span class="value">50 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Min толщина утепления</span>
+                                    <span class="value">189 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Кровельная панель</span>
+                                    <span class="value">с обрешеткой</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Толщина утепления цоколя и крыши</span>
+                                    <span class="value">239 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внутренние стены обшиты с двух сторон ГСПВ</span>
+                                    <span class="value">+</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внешнее контрутепление</span>
+                                    <span class="value">+</span>
+                                    <span class="price"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="total" disabled>
+                                    <span class="checkbox"></span>
+                                    <span class="field">Итоговая стоимость</span>
+                                    <span class="value"></span>
+                                    <span class="price total-price" data-price="1680000"><span>1 680 000</span> ₽</span>
+                                </label>
+                                <label class="add-price">
+                                    <input type="checkbox" name="field" data-price="450000">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Имитация бруса</span>
+                                    <span class="value">142 мм</span>
+                                    <span class="price"><span>450 000</span> ₽</span>
+                                </label>
+                                <label class="add-price">
+                                    <input type="checkbox" name="field" data-price="125000">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Силовой каркас стен</span>
+                                    <span class="value">142 мм</span>
+                                    <span class="price"><span>125 000</span> ₽</span>
+                                </label>
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Силовой каркас стен</span>
+                                    <span class="value">142 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внешнее контрутепление</span>
+                                    <span class="value">50 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Min толщина утепления</span>
+                                    <span class="value">189 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Кровельная панель</span>
+                                    <span class="value">с обрешеткой</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Толщина утепления цоколя и крыши</span>
+                                    <span class="value">239 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внутренние стены обшиты с двух сторон ГСПВ</span>
+                                    <span class="value">+</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внешнее контрутепление</span>
+                                    <span class="value">+</span>
+                                    <span class="price"></span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="total" disabled>
+                                    <span class="checkbox"></span>
+                                    <span class="field">Итоговая стоимость</span>
+                                    <span class="value"></span>
+                                    <span class="price total-price" data-price="1780000"><span>1 780 000</span> ₽</span>
+                                </label>
+                                <label class="add-price">
+                                    <input type="checkbox" name="field" data-price="750000">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Штукатурка с планкеном</span>
+                                    <span class="value">142 мм</span>
+                                    <span class="price"><span>750 000</span> ₽</span>
+                                </label>
+                                <label class="add-price">
+                                    <input type="checkbox" name="field" data-price="75000">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Силовой каркас стен</span>
+                                    <span class="value">742 мм</span>
+                                    <span class="price"><span>75 000</span> ₽</span>
+                                </label>
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Силовой каркас стен</span>
+                                    <span class="value">142 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внешнее контрутепление</span>
+                                    <span class="value">50 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Min толщина утепления</span>
+                                    <span class="value">189 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Кровельная панель</span>
+                                    <span class="value">с обрешеткой</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Толщина утепления цоколя и крыши</span>
+                                    <span class="value">239 мм</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внутренние стены обшиты с двух сторон ГСПВ</span>
+                                    <span class="value">+</span>
+                                    <span class="price"></span>
+                                </label>
+
+                                <label disabled>
+                                    <input type="checkbox" name="field">
+                                    <span class="checkbox"></span>
+                                    <span class="field">Внешнее контрутепление</span>
+                                    <span class="value">+</span>
+                                    <span class="price"></span>
+                                </label>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="complect__right">
+                        <ul class="complect__variants">
+                            <li>
+                                <label>
+                                    <input type="radio" name="complect" checked data-price="1467990" />
+                                    <span class="checkbox"></span>
+                                    <img src="img/single-project-1.jpg" alt="">
+                                    <span>Hauberk с планкеном</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="complect" data-price="1580011" />
+                                    <span class="checkbox"></span>
+                                    <img src="img/single-project-1.jpg" alt="">
+                                    <span>Hauberk</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="complect" data-price="1680000" />
+                                    <span class="checkbox"></span>
+                                    <img src="img/single-project-1.jpg" alt="">
+                                    <span>Имитация бруса</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    <input type="radio" name="complect" data-price="1780000" />
+                                    <span class="checkbox"></span>
+                                    <img src="img/single-project-1.jpg" alt="">
+                                    <span>Hauberk с планкеном</span>
+                                </label>
+                            </li>
+                        </ul>
+                        <a href="" class="_btn _open-popup">Заказать</a>
+                    </div>
                 </div>
             </div>
         </div>

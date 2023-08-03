@@ -2,7 +2,7 @@ import { isMobile } from "./isMobile.js";
 
 const popup = document.querySelector('.popup');
 const popupClose = document.querySelector('.popup__close');
-const popupOpenButtons = document.querySelectorAll('._open-opup');
+const popupOpenButtons = document.querySelectorAll('._open-popup');
 
 
 if (popupOpenButtons.length) {

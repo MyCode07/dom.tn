@@ -15,6 +15,7 @@ import './utils/filter.js';
 import './utils/audit.js';
 import './utils/accordeon.js';
 import './utils/popup.js';
+import './utils/single-product.js';
 
 
 // import './utils/smoothscrol.js';
