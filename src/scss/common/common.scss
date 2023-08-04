@@ -6,7 +6,7 @@ body {
     scroll-behavior: smooth;
 
     background-color: #fff;
-    color: #373737;
+    color: $color;
 
     font-family: "Geometria", Arial, sans-serif;
     font-style: normal;
@@ -134,7 +134,7 @@ svg {
 }
 
 ._btn {
-    background-color: #d6263b;
+    background-color: $accent;
     color: #fff;
     white-space: nowrap;
     font-size: 16px;
@@ -170,7 +170,7 @@ svg {
 
     &-white {
         background-color: #fff;
-        color: #c12139;
+        color: $accent;
         font-weight: bold;
 
         display: flex;
@@ -212,7 +212,7 @@ svg {
         @media (any-hover: hover) {
             &:hover {
                 background-color: #fff;
-                color: #c12139;
+                color: $accent;
             }
         }
     }
@@ -317,7 +317,7 @@ blockquote {
 }
 
 ._red {
-    background-color: #c12139;
+    background-color: $accent;
     position: relative;
 
     .stripe {
@@ -439,4 +439,10 @@ blockquote {
 
     &__open {
     }
+}
+
+[hidden] {
+    display: none !important;
+    visibility: hidden;
+    pointer-events: none;
 }

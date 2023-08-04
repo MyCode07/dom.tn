@@ -43,12 +43,12 @@
             li {
                 &._active {
                     a {
-                        border-color: #c02235;
+                        border-color: $accent;
                     }
                 }
 
                 a {
-                    color: #c02235;
+                    color: $accent;
 
                     font-size: 1rem;
                     font-weight: 700;
@@ -268,7 +268,7 @@
 
                 &.sorting-asc + span + svg path:first-child,
                 &.sorting-desc + span + svg path:last-child {
-                    fill: #c02235;
+                    fill: $accent;
                 }
             }
 
@@ -396,8 +396,8 @@
                 display: none;
 
                 &:checked + .checkbox {
-                    border-color: #c02235;
-                    background-color: #c02235;
+                    border-color: $accent;
+                    background-color: $accent;
 
                     &:after {
                         display: block;
@@ -451,7 +451,7 @@
                         height: 50%;
                         border-radius: 50%;
                         background-image: unset;
-                        background-color: #c02235;
+                        background-color: $accent;
                         z-index: 1;
                         display: none;
                         flex: 0 0 auto;
@@ -594,7 +594,7 @@
     &__reset {
         width: 100%;
 
-        color: #c02235;
+        color: $accent;
         font-size: 14px;
         color: #2d3134;
         border-radius: 4px;
@@ -638,7 +638,7 @@
     // .dhx_slider__range
 
     &__range {
-        background-color: #c02235;
+        background-color: $accent;
         height: 4px;
 
         @media (max-width: 768px) {
@@ -666,7 +666,7 @@
 
         &:before,
         &:after {
-            background-color: #c02235;
+            background-color: $accent;
         }
     }
 }

@@ -3,3 +3,6 @@ $containerSmall: 1200;
 $padding: 30;
 $containerWithPadding: $container + ($padding * 2);
 $containerSmallWithPadding: $containerSmall + ($padding * 2);
+
+$color: var(--color);
+$accent: var(--accent);

@@ -44,7 +44,7 @@
         & > :first-child {
             grid-column: span 2;
 
-            background-color: #c02235;
+            background-color: $accent;
             border-radius: 30px;
             color: #fff;
 
@@ -99,7 +99,7 @@
                 display: block;
                 width: 100px;
                 height: 100px;
-                background-color: #c02235;
+                background-color: $accent;
                 border-radius: 0px 0px 20px 20px;
 
                 display: flex;

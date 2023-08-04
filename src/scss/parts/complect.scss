@@ -242,7 +242,7 @@
                     display: none;
 
                     &:checked + .checkbox {
-                        background-color: #c02235;
+                        background-color: $accent;
                     }
                 }
 

@@ -63,7 +63,7 @@
             }
 
             a {
-                color: #c02235;
+                color: $accent;
                 font-weight: 500;
                 text-decoration: underline;
             }
@@ -86,7 +86,7 @@
 
     &.invalid {
         .wpcf7-response-output {
-            border-color: #c02235 !important;
+            border-color: $accent !important;
         }
     }
 

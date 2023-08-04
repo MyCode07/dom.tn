@@ -96,3 +96,42 @@
 
 @@include('to-top.html')
 @@include('form.html')
+
+<div class="audit-popup">
+    <div class="audit-popup__container _container-small">
+        <div class="audit-popup__body">
+            <div class="audit-popup__top">
+                <button class="audit-popup__close">
+                    <img src="@img/icons/close.svg" alt="">
+                </button>
+            </div>
+            <div class="audit-popup__content">
+                <h3 class="audit-popup__title"></h3>
+                <img class="audit-popup__img" src="" alt="">
+                <ol>
+                    <li class="audit-popup__error">
+                        <h4>
+                            <img src="@img/icons/error.svg" alt="">
+                            <span>Выявленная ошибка</span>
+                        </h4>
+                        <div></div>
+                    </li>
+                    <li class="audit-popup__work">
+                        <h4>
+                            <img src="@img/icons/wraning.svg" alt="">
+                            <span>Предпринятые действия</span>
+                        </h4>
+                        <div></div>
+                    </li>
+                    <li class="audit-popup__fix">
+                        <h4>
+                            <img src="@img/icons/check-round.svg" alt="">
+                            <span>Предотвращенные последствия</span>
+                        </h4>
+                        <div></div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

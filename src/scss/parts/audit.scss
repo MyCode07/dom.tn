@@ -53,7 +53,7 @@
                 flex: 0 0 auto;
                 @include adaptive-value("margin-right", 40, 15, 1);
 
-                color: #e4132f;
+                color: $accent;
                 font-weight: bold;
 
                 @media (max-width: 600px) {

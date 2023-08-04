@@ -1,5 +1,5 @@
 .process {
-    background-color: #373737;
+    background-color: $color;
     color: #fff;
     position: relative;
     @include adaptive-value("padding-bottom", 120, 65, 1);
@@ -129,7 +129,7 @@
         &._bgc {
             position: relative;
             background-color: #fff;
-            color: #373737;
+            color: $color;
 
             justify-content: flex-start;
 
@@ -143,8 +143,8 @@
                 right: 0;
                 bottom: 0;
                 border: 20px solid transparent;
-                border-right: 20px solid #373737;
-                border-bottom: 20px solid #373737;
+                border-right: 20px solid $color;
+                border-bottom: 20px solid $color;
                 display: block;
                 width: 0;
                 height: 0;

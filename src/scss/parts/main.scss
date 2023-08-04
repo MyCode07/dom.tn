@@ -40,6 +40,14 @@
             position: relative;
             padding-bottom: 61%;
 
+            @media (any-hover: hover) {
+                &:hover {
+                    &:before {
+                        opacity: 1;
+                    }
+                }
+            }
+
             img {
                 position: absolute;
                 left: 0;
@@ -48,6 +56,25 @@
                 height: 100%;
                 object-fit: cover;
                 border-radius: 7px;
+                pointer-events: none;
+            }
+
+            &:before {
+                pointer-events: none;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                content: "";
+                transition: all 0.3s ease 0s;
+                opacity: 0;
+                background-color: rgba(45, 49, 52, 0.4);
+                background-image: url("@img/icons/zoom.svg");
+                background-repeat: no-repeat;
+                background-position: 50%;
+                background-size: 6rem;
+                z-index: 1;
             }
         }
 
@@ -198,7 +225,7 @@
                 transition: all 0.3s ease 0s;
 
                 &.swiper-pagination-bullet-active {
-                    background-color: #e4132f;
+                    background-color: $accent;
                 }
             }
         }
@@ -289,11 +316,11 @@
                 border-color: #e5e5e5;
 
                 p {
-                    color: #373737;
+                    color: $color;
                 }
 
                 .cross {
-                    color: #e4132f;
+                    color: $accent;
                 }
             }
         }
@@ -401,7 +428,7 @@
                         height: 0.5rem;
                         content: "";
                         border-radius: 50%;
-                        background: #c02235;
+                        background: $accent;
                     }
 
                     span,
@@ -452,7 +479,7 @@
 
                 li {
                     a {
-                        color: #c02235;
+                        color: $accent;
 
                         display: flex;
                         align-items: center;
