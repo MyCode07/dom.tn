@@ -1,30 +1,40 @@
-function resetSliders() {
+const admin_url = adminajaxurl.ajaxurl;
+
+function sendRequestImages(i) {
+    let data = {
+        'action': 'load_project_variant_images',
+        'variant': i,
+        'id': 358
+    }
+
+    if (i < 0) data.variant = 'default';
+    else data.variant = i;
+
+    jQuery.ajax({
+        url: url,
+        type: 'POST',
+        data: data,
+        success: function (data) {
+            if (data == '0') {
+
+            }
+            else {
+                console.log(data);
+                resetSliders(data)
+            }
+        }
+    });
+}
+
+function resetSliders(slides) {
     const bigSlider = document.querySelector('.project__images-big .swiper').swiper;
     const thumbsSlider = document.querySelector('.project__images-thumbs .swiper').swiper;
 
     bigSlider.removeAllSlides()
-    bigSlider.appendSlide([
-        `<div class="swiper-slide">
-            <img src="img/1x1.png" srcset="img/single-project-2.jpg" loading="lazy" />
-            <div class="swiper-lazy-preloader"></div>
-        </div>`,
-        `<div class="swiper-slide">
-            <img src="img/1x1.png" srcset="img/single-project-1.jpg" loading="lazy" />
-            <div class="swiper-lazy-preloader"></div>
-        </div>`
-    ])
+    bigSlider.appendSlide(slides)
 
     thumbsSlider.removeAllSlides()
-    thumbsSlider.appendSlide([
-        `<div class="swiper-slide">
-            <img src="img/1x1.png" srcset="img/single-project-2.jpg" loading="lazy" />
-            <div class="swiper-lazy-preloader"></div>
-        </div>`,
-        `<div class="swiper-slide">
-            <img src="img/1x1.png" srcset="img/single-project-1.jpg" loading="lazy" />
-            <div class="swiper-lazy-preloader"></div>
-        </div>`
-    ])
+    thumbsSlider.appendSlide(slides)
 
     bigSlider.update()
     thumbsSlider.update()
@@ -39,8 +49,8 @@ if (projectVariants.length) {
         const newPrice = +input.dataset.price;
 
         input.addEventListener('change', function () {
-            resetSliders()
-
+            const i = [...variant.parentElement.children].indexOf(variant) - 1;
+            sendRequestImages(i)
             priceOutput.dataset.price = newPrice
             priceOutput.querySelector('span').textContent = Intl.NumberFormat('ru-RU').format(newPrice)
         })
@@ -73,7 +83,6 @@ if (complectVariants.length) {
             priceOutput.querySelector('span').textContent = Intl.NumberFormat('ru-RU').format(newPrice)
         })
 
-
         const addParams = variantPrice.querySelectorAll('.add-price');
         if (addParams.length) {
             addParams.forEach(item => {
@@ -81,7 +90,6 @@ if (complectVariants.length) {
                 const price = +input.dataset.price;
 
                 input.addEventListener('change', function () {
-
                     if (input.checked) totalPrice += price;
                     else totalPrice -= price;
 
@@ -89,7 +97,6 @@ if (complectVariants.length) {
                 })
             })
         }
-
         i++;
     })
 }
