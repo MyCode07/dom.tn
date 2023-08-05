@@ -74,24 +74,31 @@
             margin-right: 0;
         }
 
-        span {
+        i {
+            display: none;
+        }
+
+        div {
             width: calc(33.333% - 10px);
-            display: flex;
-            align-items: center;
-            margin: 0 15px 10px 0;
             flex: 0 0 auto;
+            margin: 0 15px 10px 0;
 
-            @media (max-width: 768px) {
-                font-size: 14px;
-            }
+            span {
+                display: flex;
+                align-items: center;
 
-            svg,
-            img {
-                margin-right: 0.75rem;
-                flex: 0 0 auto;
-                width: 0.9375rem;
-                height: 0.9375rem;
-                fill: #c1c3c2;
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                }
+
+                svg,
+                img {
+                    margin-right: 0.75rem;
+                    flex: 0 0 auto;
+                    width: 0.9375rem;
+                    height: 0.9375rem;
+                    fill: #c1c3c2;
+                }
             }
         }
     }
