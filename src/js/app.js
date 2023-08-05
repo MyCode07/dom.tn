@@ -5,19 +5,17 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 
-
 import './utils/menu.js';
 import './utils/sliders.js';
 import './utils/to-top.js';
-import './utils/replace.js';
 import './utils/inputmask.js';
 import './utils/filter.js';
 import './utils/audit.js';
 import './utils/accordeon.js';
 import './utils/popup.js';
-import './utils/single-product.js';
+import './utils/single-project.js';
 
-
+// import './utils/replace.js';
 // import './utils/smoothscrol.js';
 // import './utils/mouse.js';
 // import './utils/ticker.js';

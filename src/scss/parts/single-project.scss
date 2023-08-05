@@ -275,6 +275,11 @@
             }
 
             li {
+                &._disabled {
+                    pointer-events: none;
+                    cursor: default;
+                }
+
                 label {
                     display: block;
                     cursor: pointer;
