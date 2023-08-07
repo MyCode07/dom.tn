@@ -794,10 +794,17 @@
         position: relative;
         padding-top: 35%;
         color: #fff;
+        display: block;
         @include adaptive-value("font-size", 18, 14, 1);
 
         @media (max-width: 768px) {
             padding-top: 30%;
+        }
+
+        cursor: pointer;
+
+        * {
+            pointer-events: none;
         }
 
         &:before {

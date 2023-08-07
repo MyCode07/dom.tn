@@ -124,7 +124,7 @@ const getOdds = () => {
     let price = +priceOutput.dataset.price;
 
 
-    let text = `Дом: ${title.textContent}, \nВариант отделки: ${variant(document.querySelectorAll('.complect__variants li'))}\nЦена: ${price}.`;
+    let text = `Дом: ${title.textContent}, \nВариант отделки: ${variant(complectVariants)}\nЦена: ${price}.`;
 
 
     if (addParams.length) {
@@ -150,16 +150,12 @@ document.addEventListener('click', function (e) {
         textarea.innerHTML = '';
 
         const price = document.querySelector('.project__right-price').innerText
-        const text = `Дом: ${title.innerText}, \nВариант отделки: ${variant(complectVariants)}\nЦена: ${price}.`;
+        const text = `Дом: ${title.innerText}, \nВариант отделки: ${variant(projectVariants)}\nЦена: ${price}.`;
         textarea.innerHTML = text;
-
-        console.log(text);
     }
 
     if (targetEl.classList.contains('_open-popup') && targetEl.closest('.complect')) {
         textarea.innerHTML = '';
         textarea.innerHTML = getOdds();
-
-        console.log(textarea.innerHTML);
     }
 })
