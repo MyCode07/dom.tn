@@ -4,7 +4,7 @@ function sendRequestImages(i) {
     let data = {
         'action': 'load_project_variant_images',
         'variant': i,
-        'id': 358
+        'id': +document.querySelector('h1').id
     }
 
     if (i < 0) data.variant = 'default';
