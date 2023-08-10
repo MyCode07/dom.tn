@@ -134,10 +134,8 @@
             margin-top: 30px;
             text-align: center;
 
-            span {
-                color: #54555a;
-                font-size: 0.8em;
-                font-size: 12px;
+            & > :not(:last-child){
+                margin-bottom: 0.75em;
             }
 
             a {
@@ -145,6 +143,20 @@
                 font-weight: 700;
                 display: block;
                 font-size: 20px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                white-space: nowrap;
+
+                svg,
+                img {
+                    flex: 0 0 auto;
+                    width: 1em;
+                    height: 1em;
+                    fill: $color;
+                    margin-right: 0.25em;
+                }
             }
         }
     }

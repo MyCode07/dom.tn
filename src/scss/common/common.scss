@@ -69,7 +69,7 @@ main {
 
 section {
     &:not(.hero) {
-        @include adaptive-value("margin-bottom", 200, 100, 1);
+        @include adaptive-value("margin-bottom", 100, 50, 1);
     }
 }
 
@@ -445,4 +445,17 @@ blockquote {
     display: none !important;
     visibility: hidden;
     pointer-events: none;
+}
+
+.iframe {
+    margin-bottom: 0 !important;
+
+    iframe {
+        width: 100%;
+        display: block;
+
+        @media (max-width: 1024px) {
+            @include adaptive-value("height", 600, 320, 1);
+        }
+    }
 }

@@ -45,7 +45,7 @@
             margin-bottom: 2em;
 
             & > :not(:last-child) {
-                margin-bottom: 1.875rem;
+                margin-bottom: 2.25rem;
             }
         }
 
@@ -98,6 +98,31 @@
 
     &__contacts {
         display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+
+
+        a {
+            &:has(svg),
+            &:has(img) {
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+
+                svg,
+                img {
+                    flex: 0 0 auto;
+                    width: 1em;
+                    height: 1em;
+                    fill: #fff;
+                    margin-right: 0.25em;
+                }
+
+                span {
+                    margin: 0;
+                }
+            }
+        }
     }
 
     // .footer__bottom

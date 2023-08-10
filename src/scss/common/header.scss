@@ -20,7 +20,7 @@
         display: flex;
         align-items: center;
 
-        @media (max-width: 600px) {
+        @media (max-width: 1024px) {
             justify-content: space-between;
         }
     }
@@ -116,7 +116,6 @@
                     height: 10px;
                     margin-left: 5px;
                     transition: all 0.3s ease 0s;
-                    
                 }
 
                 @media (any-hover: hover) {
@@ -128,7 +127,7 @@
                             z-index: 1000;
                         }
 
-                        svg{
+                        svg {
                             transform: rotate(180deg);
                         }
                     }
@@ -182,42 +181,43 @@
     // .header__contacts
 
     &__contacts {
-        @include adaptive-value("margin-right", 64, 0, 1);
+        @include adaptive-value("margin-right", 64, -40, 1);
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 10px 20px;
 
         @media (max-width: 1024px) {
             flex: 1 1 auto;
             display: flex;
             justify-content: flex-end;
-        }
-
-        @media (max-width: 600px) {
+            margin-right: 20px !important;
             display: none;
-        }
-
-        div {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            text-align: center;
-            white-space: nowrap;
-        }
-
-        span {
-            color: #54555a;
-            font-size: 0.8em;
         }
 
         a {
             font-weight: 700;
-            display: block;
             color: inherit;
-
             @include adaptive-value("font-size", 16, 12, 1);
+
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+
+            svg,
+            img {
+                flex: 0 0 auto;
+                width: 1em;
+                height: 1em;
+                fill: $color;
+                margin-right: 0.25em;
+            }
         }
     }
 
     ._btn {
+        margin-left: auto;
         @media (max-width: 600px) {
             display: none;
         }
